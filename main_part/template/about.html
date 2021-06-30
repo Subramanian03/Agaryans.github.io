@@ -1,0 +1,264 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Agaryans </title>
+	<!-- Bootstrap core CSS -->
+	<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<!-- Fontawesome CSS -->
+	<link href="{% static 'css/all.css' %}" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body method="post">
+	<!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'images/logo.png' %}" alt="logo" />
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'index' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" href="{% url 'about' %}">About</a>
+                  </li>
+				  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'UserLogin' %}">Login</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'register' %}">Register</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'services' %}">Services</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Portfolio
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                        <a class="dropdown-item" href="{% url 'portfolio' %}">1 Column Portfolio</a>
+                        
+                     </div>
+                  </li>
+                  
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Pages
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                        <a class="dropdown-item" href="{% url 'faq' %}">FAQ</a>
+                       
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                  </li>
+				   <li class="nav-item">
+                     <a class="nav-link" href="{% url 'Admin' %}">Admin</a>
+                  </li>
+               </ul>
+            </div>
+        </div>
+    </nav>
+	<!-- full Title -->
+	<div class="full-title">
+		<div class="container">
+			<!-- Page Heading/Breadcrumbs -->
+			<h1 class="mt-4 mb-3">About
+			</h1>
+		</div>
+	</div>
+    <!-- Page Content -->
+    <div class="container-fluid">
+		<div class="breadcrumb-main">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="{% url 'index' %}">Home</a>
+				</li>
+				<li class="breadcrumb-item active">About</li>
+			</ol>
+		</div>
+		<!-- About Content -->
+		<div class="about-main">
+			<div class="row">
+				<div class="col-lg-6">
+					<img class="img-fluid rounded mb-4" src="{% static 'images/about-img.jpg' %}" alt="" />
+				</div>
+				<div class="col-lg-6">
+					<h2>About Modern Machines</h2>
+					<p>Equipment rental, also called plant hire in some countries (in the UK for instance), is a service industry providing machinery, equipment and tools of all kinds and sizes (from earthmoving to powered access, from power generation to hand-held tools, etc.) for a limited period of time to final users, mainly to construction contractors but also to industry and individual consumers. </p>
+					<p>Equipment rental helps companies reduce their fixed costs and minimises the financial risks of owning equipment fleets. By renting rather than owning, the user only pays for equipment when it is needed, and rental reduces the ongoing costs that come with equipment ownership, including maintenance, in-service inspections, repairs, transportation and storage.</p>
+					<p>Range of recent equipment available: Some rental companies have inventories up to the hundreds of thousands of pieces of equipment, while others are specialized in a few specific products. They can supply the most comprehensive range of state-of-the-art equipment – with or without qualified operators – when and where customers need it.</p>
+				</div>
+			</div>
+			<!-- /.row -->
+		</div>
+
+		<!-- Team Members -->
+		<div class="team-members-box">  
+			<h2>Our Team</h2>
+			<div class="row">
+				<div class="col-lg-4 mb-4">
+				  <div class="card h-100 text-center">
+					<img class="card-img-top" src="{% static 'images/team_01.jpg' %}" alt="" />
+					<div class="card-body">
+						<h4 class="card-title">Team Member</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Leader</h6>
+					</div>
+					<div class="card-footer">
+						<ul>
+							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+						</ul>
+					</div>
+				  </div>
+				</div>
+				<div class="col-lg-4 mb-4">
+				  <div class="card h-100 text-center">
+					<img class="card-img-top" src="{% static '/images/team_02.jpg' %}" alt="" />
+					<div class="card-body">
+						<h4 class="card-title">Team Member</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Co-Leader</h6>
+					</div>
+					<div class="card-footer">
+						<ul>
+							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+						</ul>
+					</div>
+				  </div>
+				</div>
+				<div class="col-lg-4 mb-4">
+				  <div class="card h-100 text-center">
+					<img class="card-img-top" src="{% static '/images/team_03.jpg' %}" alt="" />
+					<div class="card-body">
+						<h4 class="card-title">Team Member</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Assistant</h6>
+					</div>
+					<div class="card-footer">
+						<ul>
+							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+						</ul>
+					</div>
+				  </div>
+				</div>
+			</div>
+			<!-- /.row -->
+		</div>
+		
+		<!-- /.container -->
+	</div>
+
+    <!--footer starts from here-->
+    <footer class="footer">
+        <div class="container bottom_border">
+            <div class="row">
+               <div class="col-lg-3 col-md-6 col-sm-6 col">
+					<h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+					<!--headin5_amrc-->
+					<p><i class="fa fa-location-arrow"></i>3-62A,New street,Hyderbad</p>
+					<p><i class="fa fa-phone"></i> +91-9999878398 </p>
+					<p><i class="fa fa fa-envelope"></i> info@example.com </p>
+               </div>
+               <div class="col-lg-3 col-md-6 col-sm-6 col">
+					<h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+					<!--headin5_amrc ends here-->
+					<ul class="footer_ul2_amrc">
+						<li>
+							<a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+							<p><a href="#">https://www.Agaryanshelp.com/</a></p>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+							<p><a href="#">https://www.Agaryansneed.com/</a></p>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+							<p><a href="#">https://www.Agaryansservice.com/</a></p>
+						</li>
+					</ul>
+					<!--footer_ul2_amrc ends here-->
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+					<!--headin5_amrc-->
+					<ul class="footer_ul_amrc">
+						<li><a href="#">Rental Machines</a></li>
+						<li><a href="#">Our Team </a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Our Services</a></li>
+						<li><a href="#">Contacts</a></li>
+					</ul>
+					<!--footer_ul_amrc ends here-->
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6 ">
+					<h5 class="headin5_amrc col_white_amrc pt2">Recent posts</h5>
+					<!--headin5_amrc-->
+					<ul class="footer_ul_amrc">
+						<li class="media">
+							<div class="media-left">
+								<img class="img-fluid" src="{% static 'images/post-img-01.jpg' %}" alt="" />
+							</div>
+							<div class="media-body">
+								<p>How to find best machines?</p>
+								<span>22 Sep 2020</span>
+							</div>
+						</li>
+						<li class="media">
+							<div class="media-left">
+								<img class="img-fluid" src="{% static 'images/post-img-02.jpg' %}" alt="" />
+							</div>
+							<div class="media-body">
+								<p>How to find best rental equipments?</p>
+								<span>34 Sep 2020</span>
+							</div>
+						</li>
+						<li class="media">
+							<div class="media-left">
+								<img class="img-fluid" src="{% static 'images/post-img-03.jpg' %}" alt="" />
+							</div>
+							<div class="media-body">
+								<p>How to find best Rental products?</p>
+								<span>30 Sep 2020</span>
+							</div>
+						</li>
+					</ul>
+					<!--footer_ul_amrc ends here-->
+				</div>
+			</div>
+		</div>
+        <div class="container">
+            <div class="footer-logo">
+				<a href="#"><img src="{% static 'images/footer-logo.png' %}" alt="" /></a>
+			</div>
+            <!--foote_bottom_ul_amrc ends here-->
+           
+            <ul class="social_footer_ul">
+				<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here-->
+        </div>
+    </footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
